@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para Ti</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Botón para iniciar la música -->
+    <button id="play-button" class="play-button">Reproducir Música</button>
+    
+    <!-- Audio de fondo (inicialmente oculto) -->
+    <audio id="background-audio" loop>
+        <source src="tu_musica1.mp3" type="audio/mp3">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <div class="letter-container">
+        <h1>Querida Amiga,</h1>
+        <p>
+            Hoy quiero dedicarte unas palabras que surgen desde el fondo de mi corazón. 
+            Aunque a veces las palabras no alcanzan para expresar todo lo que siento, 
+            espero que esta carta, acompañada de música, te haga sentir mi cariño y aprecio.
+        </p>
+
+        <p>
+Gracias por ser parte importante de mi vida, por todas las risas, los momentos difíciles y las aventuras 
+            que hemos compartido. Estoy muy agradecido por tu amistad.
+        </p>
+
+        <p>
+            Que esta melodía te acompañe mientras lees, y recuerdes lo mucho que te valoro. 
+            Siempre estaré aquí para ti, en cada paso de tu camino.
+        </p>
+
+        <footer>
+            Con cariño,<br>
+            Tu amigo
+        </footer>
+    </div>
+
+    <script>
+        // Obtener los elementos del botón y el audio
+        const playButton = document.getElementById('play-button');
+        const audio = document.getElementById('background-audio');
+        
+        // Evento para reproducir la música al hacer clic en el botón
+        playButton.addEventListener('click', function() {
+            audio.play(); // Reproducir la música
+            playButton.style.display = 'none'; // Ocultar el botón después de hacer clic
+        });
+    </script>
+</body>
+</html>
